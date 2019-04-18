@@ -19,9 +19,13 @@
 <div id="map"></div>
 <script>
 	var map;
-	var parks = [
-		{"park":"Yellowstone","coords":[44.4280,-110.5885]},
-		{"park":"Glacier","coords":[48.7596, -113.7870]}
+	var countriesOfVisit = [
+		{"countriesOfVisit":"Cameroon","coords":[7.3697,12.3547]},
+        {"countriesOfVisit":"Ibadan","coords":[7.3775, 3.9470]},
+        {"countriesOfVisit":"Togo","coords":[8.6195,0.8248]},
+        {"countriesOfVisit":"Ivory Coast","coords":[7.5400,5.5471]},
+        {"countriesOfVisit":"Uganda","coords":[1.3733,32.2903]},
+        {"countriesOfVisit":"Ghana","coords":[7.9465,1.0232]}
 		];
 	function initMap() {
 		map = new google.maps.Map(document.getElementById('map'), {
@@ -29,7 +33,7 @@
 			center: new google.maps.LatLng(44, -110),
 			mapTypeId: 'terrain'
 		});
-		mashParks(parks);
+		mashParks(countriesOfVisit);
 	}
 	function mashParks(results) {
 	for (var i = 0; i < results.length; i++) {
@@ -38,7 +42,7 @@
 		var marker = new google.maps.Marker({
 			position: latLng,
 			map: map,
-			label:results[i].park
+			label:results[i].countriesOfVisit
 			});
 		}
 	}
