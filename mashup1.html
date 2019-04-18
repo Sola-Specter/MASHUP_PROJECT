@@ -33,9 +33,9 @@
 			center: new google.maps.LatLng(44, -110),
 			mapTypeId: 'terrain'
 		});
-		mashParks(countriesOfVisit);
+		countriesMashup(countriesOfVisit);
 	}
-	function mashParks(results) {
+	function countriesMashup(results) {
 	for (var i = 0; i < results.length; i++) {
 		var coords = results[i].coords;
 		var latLng = new google.maps.LatLng(coords[0], coords[1]);
